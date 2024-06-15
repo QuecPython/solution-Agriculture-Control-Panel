@@ -66,7 +66,7 @@ U-235 开发板默认板载 EC600U 模组，并外接一个 MIPI 接口的、分
    ```
 
 2. **烧录固件**：
-   按照[说明](https://python.quectel.com/doc/Application_guide/dev-tools/QPYcom/qpycom-dw.html#Download-Firmware)将固件烧录到开发板上。
+   按照[说明](https://python.quectel.com/doc/Application_guide/zh/dev-tools/QPYcom/qpycom-dw.html#Download-Firmware)将固件烧录到开发板上。
 
 ### 运行应用程序
 
