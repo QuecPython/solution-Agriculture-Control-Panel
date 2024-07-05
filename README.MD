@@ -14,7 +14,7 @@ Welcome to the Smart Agriculture Central Control Panel Solution repository for Q
   - [Running the Application](#running-the-application)
 - [Directory Structure](#directory-structure)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contribution](#contribution)
 - [License](#license)
 - [Support](#support)
 
@@ -66,6 +66,7 @@ Before you begin, ensure you have the following prerequisites:
    ```
 
 2. **Flash the Firmware**:
+
    Follow the [instructions](https://python.quectel.com/doc/Application_guide/en/dev-tools/QPYcom/qpycom-dw.html#Download-Firmware) to flash the firmware to the development board.
 
 ### Running the Application
@@ -130,7 +131,7 @@ solution-Agriculture-Control-Panel/
 
 [Click](https://python.quectel.com/doc/Application_guide/en/solutions/Agriculture-Control-Panel/index.html) for details of the smart agriculture central control panel solution's implementation.
 
-## Contributing
+## Contribution
 
 We welcome contributions to improve this project! Please follow these steps to contribute:
 
