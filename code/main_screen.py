@@ -27,6 +27,8 @@ class MainScreen(Screen):
         self.monitor_btn = None
         self.weather_btn = None
         self.screen = None
+        self.main_label_humi = None 
+        self.main_label_temp = None
         self.name = "MainScreen"
         super().create_style()
         
@@ -183,7 +185,7 @@ class MainScreen(Screen):
         main_label_1 = lv.label(main)
         main_label_1.set_pos(124, 8)
         main_label_1.set_size(76, 13)
-        main_label_1.set_text("China Unicom")
+        main_label_1.set_text("Unicom")
         main_label_1.set_long_mode(lv.label.LONG.WRAP)
         main_label_1.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_1.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
@@ -227,7 +229,7 @@ class MainScreen(Screen):
         main_label_11 = lv.label(main)
         main_label_11.set_pos(127, 261)
         main_label_11.set_size(76, 17)
-        main_label_11.set_text("History curve")
+        main_label_11.set_text("History")
         main_label_11.set_long_mode(lv.label.LONG.WRAP)
         main_label_11.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_11.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
@@ -245,23 +247,23 @@ class MainScreen(Screen):
         main_label_14 = lv.label(main)
         main_label_14.set_pos(528, 102)
         main_label_14.set_size(100, 32)
-        main_label_14.set_text("Soil pH : 7.1")
+        main_label_14.set_text("PH : 7.1")
         main_label_14.set_long_mode(lv.label.LONG.WRAP)
         main_label_14.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_14.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
 
-        main_label_16 = lv.label(main)
-        main_label_16.set_pos(524, 185)
-        main_label_16.set_size(109, 24)
-        main_label_16.set_text("Soil moisture : 20%")
-        main_label_16.set_long_mode(lv.label.LONG.WRAP)
-        main_label_16.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
-        main_label_16.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
+        self.main_label_humi = lv.label(main)
+        self.main_label_humi.set_pos(524, 185)
+        self.main_label_humi.set_size(109, 24)
+        self.main_label_humi.set_text("")
+        self.main_label_humi.set_long_mode(lv.label.LONG.WRAP)
+        self.main_label_humi.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
+        self.main_label_humi.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         main_label_18 = lv.label(main)
         main_label_18.set_pos(261, 446)
         main_label_18.set_size(76, 17)
-        main_label_18.set_text("Temperature")
+        main_label_18.set_text("Temp")
         main_label_18.set_long_mode(lv.label.LONG.WRAP)
         main_label_18.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_18.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
@@ -397,7 +399,7 @@ class MainScreen(Screen):
         main_label_21 = lv.label(main)
         main_label_21.set_pos(166, 80)
         main_label_21.set_size(64, 12)
-        main_label_21.set_text("Hefei City")
+        main_label_21.set_text("Hefei ")
         main_label_21.set_long_mode(lv.label.LONG.WRAP)
         main_label_21.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_21.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
@@ -458,7 +460,7 @@ class MainScreen(Screen):
         main_btn_1.set_style_pad_all(0, lv.STATE.DEFAULT)
         main_btn_1_label.align(lv.ALIGN.CENTER, 0, 0)
         main_btn_1_label.set_style_text_color(lv.color_make(0xf7, 0xf7, 0xf7), lv.STATE.DEFAULT)
-        main_btn_1_label.set_style_text_font(lv.font_siyuan_Regular_14, lv.STATE.DEFAULT)
+        main_btn_1_label.set_style_text_font(lv.font_montserrat_14, lv.STATE.DEFAULT)
         main_btn_1.add_style(self.style_opa_btn, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         main_btn_2 = lv.btn(main)
@@ -466,11 +468,11 @@ class MainScreen(Screen):
         main_btn_2.set_size(100, 50)
         self.monitor_btn = main_btn_2
         main_btn_2_label = lv.label(main_btn_2)
-        main_btn_2_label.set_text("Environment parameters")
+        main_btn_2_label.set_text("Environment")
         main_btn_2.set_style_pad_all(0, lv.STATE.DEFAULT)
         main_btn_2_label.align(lv.ALIGN.CENTER, 0, 0)
         main_btn_2_label.set_style_text_color(lv.color_make(0xf7, 0xf7, 0xf7), lv.STATE.DEFAULT)
-        main_btn_2_label.set_style_text_font(lv.font_siyuan_Regular_14, lv.STATE.DEFAULT)
+        main_btn_2_label.set_style_text_font(lv.font_montserrat_14, lv.STATE.DEFAULT)
         main_btn_2.add_style(self.style_opa_btn, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         main_btn_3 = lv.btn(main)
@@ -478,11 +480,11 @@ class MainScreen(Screen):
         main_btn_3.set_size(100, 50)
         self.alarm_btn = main_btn_3
         main_btn_3_label = lv.label(main_btn_3)
-        main_btn_3_label.set_text("Warning message")
+        main_btn_3_label.set_text("Warning")
         main_btn_3.set_style_pad_all(0, lv.STATE.DEFAULT)
         main_btn_3_label.align(lv.ALIGN.CENTER, 0, 0)
         main_btn_3_label.set_style_text_color(lv.color_make(0xf7, 0xf7, 0xf7), lv.STATE.DEFAULT)
-        main_btn_3_label.set_style_text_font(lv.font_siyuan_Regular_14, lv.STATE.DEFAULT)
+        main_btn_3_label.set_style_text_font(lv.font_montserrat_14, lv.STATE.DEFAULT)
         main_btn_3.add_style(self.style_opa_btn, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         main_cont_11 = lv.obj(main)
@@ -495,18 +497,18 @@ class MainScreen(Screen):
         main_cont_12.set_size(126, 41)
         main_cont_12.add_style(self.style_cont_opa_57, lv.PART.MAIN | lv.STATE.DEFAULT)
 
-        main_label_3 = lv.label(main)
-        main_label_3.set_pos(672, 186)
-        main_label_3.set_size(128, 21)
-        main_label_3.set_text("Temperature : 23°C")
-        main_label_3.set_long_mode(lv.label.LONG.WRAP)
-        main_label_3.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
-        main_label_3.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
+        self.main_label_temp = lv.label(main)
+        self.main_label_temp.set_pos(672, 186)
+        self.main_label_temp.set_size(128, 21)
+        self.main_label_temp.set_text("")
+        self.main_label_temp.set_long_mode(lv.label.LONG.WRAP)
+        self.main_label_temp.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
+        self.main_label_temp.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         main_label_6 = lv.label(main)
         main_label_6.set_pos(672, 102)
         main_label_6.set_size(126, 24)
-        main_label_6.set_text("Oxygen concentration : 50%")
+        main_label_6.set_text("Oxygen: 50%")
         main_label_6.set_long_mode(lv.label.LONG.WRAP)
         main_label_6.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         main_label_6.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
@@ -517,7 +519,14 @@ class MainScreen(Screen):
         self.monitor_btn_2.add_event_cb(lambda e: self.__monitor_btn_event_cb(e), lv.EVENT.PRESSED, None)
         self.dev_btn.add_event_cb(lambda e: self.__dev_btn_event_cb(e), lv.EVENT.PRESSED, None)
         self.setting_btn.add_event_cb(lambda e: self.__setting_btn_event_cb(e), lv.EVENT.PRESSED, None)
-
+        EventMesh.subscribe("update_main_screen_date",self.update_main_screen_date)
+   
+    def update_main_screen_date(self,topic,res):
+        humidity = int(res[0])
+        temperature = int(res[1])
+        self.main_label_humi.set_text("Humi:{}%".format(humidity))
+        self.main_label_temp.set_text("Temp:{}°C".format(temperature))
+    
     def __weather_btn_event_cb(self,e):
         src = e.get_target()
         code = e.get_code()

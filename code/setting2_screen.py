@@ -183,7 +183,7 @@ class Setting2Screen(Screen):
         setting2_label_1 = lv.label(setting2)
         setting2_label_1.set_pos(124, 8)
         setting2_label_1.set_size(76, 13)
-        setting2_label_1.set_text("China Unicom")
+        setting2_label_1.set_text("Unicom")
         setting2_label_1.set_long_mode(lv.label.LONG.WRAP)
         setting2_label_1.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         setting2_label_1.add_style(self.style_siyuan_14, lv.PART.MAIN | lv.STATE.DEFAULT)
