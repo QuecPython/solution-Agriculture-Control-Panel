@@ -66,9 +66,9 @@ class WelcomeScreen(Screen):
         welcome_img_area2.add_style(self.style_img, lv.PART.MAIN | lv.STATE.DEFAULT)
 
         welcome_label_title = lv.label(welcome)
-        welcome_label_title.set_pos(307, 170)
-        welcome_label_title.set_size(240, 32)
-        welcome_label_title.set_text("Intelligent agricultural central control system")
+        welcome_label_title.set_pos(150, 170)
+        welcome_label_title.set_size(540, 32)
+        welcome_label_title.set_text("Smart Agriculture Central Control System")
         welcome_label_title.set_long_mode(lv.label.LONG.WRAP)
         welcome_label_title.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         welcome_label_title.add_style(self.style_siyuan_22, lv.PART.MAIN | lv.STATE.DEFAULT)

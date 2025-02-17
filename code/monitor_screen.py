@@ -385,7 +385,7 @@ class MonitorScreen(Screen):
         jiance_label_13 = lv.label(jiance)
         jiance_label_13.set_pos(560, 290)
         jiance_label_13.set_size(115, 17)
-        jiance_label_13.set_text("Co2")
+        jiance_label_13.set_text("CO2")
         jiance_label_13.set_long_mode(lv.label.LONG.WRAP)
         jiance_label_13.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
         jiance_label_13.add_style(self.style_siyuan_18, lv.PART.MAIN | lv.STATE.DEFAULT)
