@@ -14,11 +14,11 @@
 
 import lvgl as lv
 import utime
-from usr import EventMesh
+from usr import EventMesh,AHT20
 from machine import LCD, Pin
 from tp import gt9xx
 from usr.screen import Screen
-
+import osTimer
 
 # LCD initialization parameters
 init_480X854_local = (
@@ -68,7 +68,8 @@ class AgriUi(object):
         self.__disp_drv = None
         self.__indev_drv = None
         self.__tp_gt911 = None
-
+        self.data_timer = osTimer()
+        self.data_timer.start(1000,1,AHT20.update_temphumi)
         self.screens = []
         self.__lvgl_init()
         self.mipilcd = None
