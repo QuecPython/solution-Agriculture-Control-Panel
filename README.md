@@ -1,6 +1,6 @@
 # Smart Agriculture Central Control Panel Solution for QuecPython
 
-[中文](README_ZH.MD) | English
+[中文](README.zh.md) | English
 
 Welcome to the Smart Agriculture Central Control Panel Solution repository for QuecPython! This repository provides a comprehensive solution for developing smart agriculture central control panel applications using QuecPython.
 
